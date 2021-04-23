@@ -14,7 +14,7 @@ public class ForexController {
   @Autowired
   private ExchangeValueRepository repository;
   
-  @GetMapping("/forex/from/{from}/to/{to}")
+  @GetMapping("/currency-exchange/from/{from}/to/{to}")
   public ExchangeValue retrieveExchangeValue
     (@PathVariable String from, @PathVariable String to){
     
