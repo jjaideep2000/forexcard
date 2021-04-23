@@ -19,7 +19,7 @@ public class ForexController {
     (@PathVariable String from, @PathVariable String to){
     
     ExchangeValue exchangeValue = 
-        new ExchangeValue(from, to);
+        repository.findByFromAndTo(from, to);
     
     exchangeValue.setPort(
         Integer.parseInt(environment.getProperty("local.server.port")));
